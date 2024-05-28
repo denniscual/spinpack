@@ -1,0 +1,38 @@
+{
+  "name": "@denniscual/spinpack",
+  "version": "0.1.0",
+  "description": "Spinpack is a CLI tool that turbocharges the developer server experience for CRA projects with Rspack",
+  "bin": {
+    "spinpack": "dist/index.js"
+  },
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra",
+    "craco",
+    "react-scripts",
+    "rspack",
+    "rsbuild",
+    "webpack"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "@rspack/cli": "^0.7.1",
+    "@rspack/core": "^0.7.1",
+    "@types/bun": "latest",
+    "@types/cross-spawn": "^6.0.6",
+    "@types/fs-extra": "^11.0.4",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^11.2.0"
+  },
+  "scripts": {
+    "dev": "rspack build",
+    "type-check": "tsc --noEmit",
+    "lint": "pnpm biome lint ./src",
+    "build": "pnpm run type-check && pnpm run lint &&  pnpm run dev"
+  }
+}
