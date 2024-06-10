@@ -9,7 +9,7 @@ Spinpack was developed to modernize the development experience for Create React 
 ## Install
 
 ```bash
-npm add -D spinpack
+npm add -D @denniscual/spinpack
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ npm add -D spinpack
 To prepare your project to use Webpack and Rspack, run:
 
 ```bash
-npm run spinpack init
+npm spinpack init
 ```
 
 This command will:
@@ -33,7 +33,7 @@ This command will:
 To start the development server, use:
 
 ```bash
-npm run spinpack start
+npm spinpack start
 ```
 
 Options:
@@ -45,7 +45,7 @@ Options:
 Example:
 
 ```bash
-npm run spinpack start --rspack
+npm spinpack start --rspack
 ```
 
 This will start the development server using Rspack. If no option is provided, Webpack will be used by default.
@@ -66,7 +66,7 @@ PORT=3001
 Start dev server with Rspack
 
 ```bash
-npm run spinpack start --rspack
+npm spinpack start --rspack
 ```
 
 This streamlined configuration process ensures that developers can focus on their code, not on managing tool settings.
