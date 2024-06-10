@@ -4,7 +4,7 @@ Spinpack is a CLI tool that turbocharges the developer server experience for [CR
 
 ## Motivation
 
-Spinpack was developed to modernize the development experience for Create React App (CRA) users facing performance bottlenecks with [Webpack](https://webpack.js.org/). By bringing in Rspack, a fast, rust-based bundler, Spinpack speeds up your development and updates your project’s tech stack without changing the way you work. Spinpack uses [Rsbuild](https://rsbuild.dev/), the Rspack powered build tool, to spin-up developer server. Spinpack makes sure developers can stay efficient without needing to give up their familiar setup.
+Spinpack was designed to modernize the development experience for Create React App (CRA) users struggling with performance issues due to [Webpack](https://webpack.js.org/). By integrating Rspack, a fast, rust-based bundler, this tool accelerates development and modernizes your project’s tech stack without altering your workflow. It leverages [Rsbuild](https://rsbuild.dev/), the Rspack powered build tool, to quickly spin up developer servers. This solution ensures developers remain productive and efficient, maintaining familiarity while benefiting from improved performance.
 
 ## Install
 
@@ -75,7 +75,11 @@ _Currently, updating Rspack, `rsbuild.config.ts`, configurations and expecting t
 
 ### Does Spinpack support production builds?
 
-Currently, Spinpack is focused exclusively on enhancing the development server experience and does not yet support configuring production builds. This ensures that developers can use Spinpack to quickly spin up a development environment using either CRA Webpack Config or Rspack without affecting the existing production build process. Adding support for production environments through Spinpack is something we highly consider for future updates.
+Currently, Spinpack is focused exclusively on enhancing the development server experience. This ensures that developers can use Spinpack to quickly spin up a development environment using either CRA Webpack Config or Rspack without affecting the existing production build process.
+
+Spinpack does generate a build configuration file, `rsbuild.config.ts`, within the project, which developers can fine-tune for production use. However, because projects often have unique requirements such as the need for specific Webpack plugins when leveraging [CRACO](https://craco.js.org/) or other similar tools for customization—this generated config might require further adjustments to fully meet production standards.
+
+We highly consider adding support for production environments through Spinpack in future updates. This would streamline the process of using the tool's configurations directly for production builds, potentially reducing the need for extensive custom setups.
 
 ## License
 
