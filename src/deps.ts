@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 import path from "node:path";
-import spawn from "cross-spawn";
+import { spawn } from "node:child_process";
 
 type PackageManger = "yarn" | "pnpm" | "npm" | "bun";
 
@@ -23,9 +23,16 @@ export function installDependencies(
       break;
   }
 
+  // Force color output for npm (or Yarn)
+  const env = {
+    ...process.env,
+    FORCE_COLOR: "true",
+  };
+
   const childProcess = spawn(installCommand, [], {
     stdio: "inherit",
     shell: true,
+    env,
   });
   childProcess.on("close", (code) => process.exit(code));
   childProcess.on("error", (err) => {

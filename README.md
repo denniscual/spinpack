@@ -40,7 +40,7 @@ Options:
 
 - -rs, --rspack: Use Rspack for the development server.
 - -cr, --craco: Use CRACO, custom create-react-app webpack config, for the development server.
-- -rs, --react-scripts: Use React Scripts, default create-react-app webpack config, for the development server (default).
+- --react-scripts: Use React Scripts, default create-react-app webpack config, for the development server (default).
 
 Example:
 

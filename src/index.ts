@@ -1,5 +1,5 @@
 import { program } from "commander";
-import spawn from "cross-spawn";
+import { spawn } from "node:child_process";
 import fs from "fs-extra";
 import path from "node:path";
 import {
@@ -47,10 +47,7 @@ program
   .description("Start the development server")
   .option("-rs, --rspack", "Use Rspack for the development server")
   .option("-cr, --craco", "Use CRACO for the development server")
-  .option(
-    "-rs, --react-scripts",
-    "Use React Scripts for the development server",
-  )
+  .option("--react-scripts", "Use React Scripts for the development server")
   .action((options) => {
     if (options.rspack) {
       setupRspack().then(spawnRspack);
