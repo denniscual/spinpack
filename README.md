@@ -6,12 +6,6 @@ Spinpack is a CLI tool that turbocharges the developer server experience for [CR
 
 Spinpack was designed to modernize the development experience for Create React App (CRA) users struggling with performance issues due to [Webpack](https://webpack.js.org/). By integrating Rspack, a fast, rust-based bundler, this tool accelerates development and modernizes your project’s tech stack without altering your workflow. It leverages [Rsbuild](https://rsbuild.dev/), the Rspack powered build tool, to quickly spin up developer servers. This solution ensures developers remain productive and efficient, maintaining familiarity while benefiting from improved performance.
 
-## Install
-
-```bash
-npm add -D @denniscual/spinpack
-```
-
 ## Usage
 
 ### Initializing a Project
@@ -19,7 +13,7 @@ npm add -D @denniscual/spinpack
 To prepare your project to use Webpack and Rspack, run:
 
 ```bash
-npm spinpack init
+npx @denniscual/spinpack init
 ```
 
 This command will:
@@ -33,7 +27,7 @@ This command will:
 To start the development server, use:
 
 ```bash
-npm spinpack start
+npx @denniscual/spinpack start
 ```
 
 Options:
@@ -45,7 +39,7 @@ Options:
 Example:
 
 ```bash
-npm spinpack start --rspack
+npx @denniscual/spinpack start --rspack
 ```
 
 This will start the development server using Rspack. If no option is provided, Webpack will be used by default.
@@ -66,7 +60,7 @@ PORT=3001
 Start dev server with Rspack
 
 ```bash
-npm spinpack start --rspack
+npx @denniscual/spinpack start --rspack
 ```
 
 This streamlined configuration process ensures that developers can focus on their code, not on managing tool settings.
