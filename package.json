@@ -17,10 +17,7 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
-    "@rspack/cli": "^0.7.1",
-    "@rspack/core": "^0.7.1",
     "@types/bun": "latest",
-    "@types/cross-spawn": "^6.0.6",
     "@types/fs-extra": "^11.0.4",
     "typescript": "^5.4.5"
   },
@@ -29,9 +26,7 @@
     "fs-extra": "^11.2.0"
   },
   "scripts": {
-    "dev": "rspack build",
-    "type-check": "tsc --noEmit",
     "lint": "pnpm biome lint ./src",
-    "build": "pnpm run type-check && pnpm run lint &&  pnpm run dev"
+    "build": "pnpm run lint &&  tsc --build"
   }
 }

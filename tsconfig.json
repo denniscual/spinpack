@@ -2,20 +2,25 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "NodeNext",
     "moduleDetection": "force",
     "allowJs": true,
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "verbatimModuleSyntax": true,
+    "moduleResolution": "nodenext",
     /* Linting */
     "skipLibCheck": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

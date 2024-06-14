@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { program } from "commander";
 import { spawn } from "node:child_process";
 import fs from "fs-extra";
