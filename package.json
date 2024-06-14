@@ -1,6 +1,6 @@
 {
   "name": "@denniscual/spinpack",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Spinpack is a CLI tool that turbocharges the developer server experience for CRA projects with Rspack",
   "bin": {
     "spinpack": "dist/index.js"
